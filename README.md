@@ -8,6 +8,16 @@ I updated the script, based on version [5.1.1](http://maven.atlassian.com/public
 The script needs some fixes:
 
 1. it doesn't use the varialbe MaxProject, so I removed it
+2. the regular expression for project id, priority, issue id and workflow have been changed
+3. rarely when creating an issue, Jira doesn't generate the list of projects for the issue, so in case the regular expression fails tol extract the projects, I go on the project list page and I take one randomly
+4. the default group is jira-users for all types of users and it can be passed as parameter
+5. the response assertion for View Project has been changed
+
+
+Further I improved the script giving the possibility:
+
+1. to create users from Crowd, using a new command line parameter -Jenable.sso=true, which is false by default
+2. to use https in case Confluence is setup with https instead of http, using a new command like parameter -Jconfluence.protocol=https, which is http by default
 
 Therefore after you download the script (with the resources) just remember to adapt the Crowd configuration (parameter -Jcrowd.host) and that the operation Create User from Crowd expect to have Crowd under the same ip address of Confluence (you can of course change it).
 
