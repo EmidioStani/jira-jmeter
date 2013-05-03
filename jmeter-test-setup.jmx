@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="2.3">
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="2.9 r1437961">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Create Jira Environment" enabled="true">
       <stringProp name="TestPlan.comments">Setup the users and projects to be used for load testing.</stringProp>
@@ -154,12 +154,12 @@
           </elementProp>
           <elementProp name="crowdhost" elementType="Argument">
             <stringProp name="Argument.name">crowdhost</stringProp>
-            <stringProp name="Argument.value">${__P(crowd.host,http://192.39.226.93:8095/crowd/)}</stringProp>
+            <stringProp name="Argument.value">${__P(crowd.host,http://192.39.116.194/crowd/)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="crowduser" elementType="Argument">
             <stringProp name="Argument.name">crowduser</stringProp>
-            <stringProp name="Argument.value">Admin Admin</stringProp>
+            <stringProp name="Argument.value">admin admin</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="defaultgroup" elementType="Argument">
@@ -1004,7 +1004,7 @@
             <stringProp name="-1237460524">groups</stringProp>
           </collectionProp>
           <collectionProp name="UserParameters.thread_values">
-            <collectionProp name="-627779301">
+            <collectionProp name="-1442897006">
               <stringProp name="4324069">${__counter(TRUE)}</stringProp>
               <stringProp name="212385523">${editissuePrefix}</stringProp>
               <stringProp name="295017937">${editissueMax}</stringProp>
@@ -1181,7 +1181,7 @@
             <stringProp name="-1237460524">groups</stringProp>
           </collectionProp>
           <collectionProp name="UserParameters.thread_values">
-            <collectionProp name="-1442184053">
+            <collectionProp name="-1363305790">
               <stringProp name="4324069">${__counter(TRUE)}</stringProp>
               <stringProp name="-1484931803">${createissuePrefix}</stringProp>
               <stringProp name="-181232417">${createissueMax}</stringProp>
@@ -1358,7 +1358,7 @@
             <stringProp name="-1237460524">groups</stringProp>
           </collectionProp>
           <collectionProp name="UserParameters.thread_values">
-            <collectionProp name="-558208090">
+            <collectionProp name="41329068">
               <stringProp name="4324069">${__counter(TRUE)}</stringProp>
               <stringProp name="1675916780">${searchPrefix}</stringProp>
               <stringProp name="1954607480">${searchMax}</stringProp>
@@ -1535,7 +1535,7 @@
             <stringProp name="-1237460524">groups</stringProp>
           </collectionProp>
           <collectionProp name="UserParameters.thread_values">
-            <collectionProp name="1990167092">
+            <collectionProp name="77756448">
               <stringProp name="4324069">${__counter(TRUE)}</stringProp>
               <stringProp name="-666129613">${useractionPrefix}</stringProp>
               <stringProp name="158603665">${useractionMax}</stringProp>
@@ -2210,7 +2210,7 @@
                         </elementProp>
                         <elementProp name="applicationPassword" elementType="HTTPArgument">
                           <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                          <stringProp name="Argument.value">${adminpassword}</stringProp>
+                          <stringProp name="Argument.value">jira</stringProp>
                           <stringProp name="Argument.metadata">=</stringProp>
                           <boolProp name="HTTPArgument.use_equals">true</boolProp>
                           <stringProp name="Argument.name">applicationPassword</stringProp>
@@ -2316,7 +2316,7 @@
                         </elementProp>
                         <elementProp name="applicationPassword" elementType="HTTPArgument">
                           <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                          <stringProp name="Argument.value">${adminpassword}</stringProp>
+                          <stringProp name="Argument.value">jira</stringProp>
                           <stringProp name="Argument.metadata">=</stringProp>
                           <boolProp name="HTTPArgument.use_equals">true</boolProp>
                           <stringProp name="Argument.name">applicationPassword</stringProp>
@@ -2725,7 +2725,7 @@
                         </elementProp>
                         <elementProp name="applicationPassword" elementType="HTTPArgument">
                           <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                          <stringProp name="Argument.value">${adminpassword}</stringProp>
+                          <stringProp name="Argument.value">jira</stringProp>
                           <stringProp name="Argument.metadata">=</stringProp>
                           <boolProp name="HTTPArgument.use_equals">true</boolProp>
                           <stringProp name="Argument.name">applicationPassword</stringProp>
@@ -2831,7 +2831,7 @@
                         </elementProp>
                         <elementProp name="applicationPassword" elementType="HTTPArgument">
                           <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                          <stringProp name="Argument.value">${adminpassword}</stringProp>
+                          <stringProp name="Argument.value">jira</stringProp>
                           <stringProp name="Argument.metadata">=</stringProp>
                           <boolProp name="HTTPArgument.use_equals">true</boolProp>
                           <stringProp name="Argument.name">applicationPassword</stringProp>
@@ -3046,6 +3046,13 @@
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">groupsToJoin</stringProp>
                 </elementProp>
+                <elementProp name="groupsToJoin" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">jira-developers</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">groupsToJoin</stringProp>
+                </elementProp>
                 <elementProp name="name" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.value">${userNamePrefix}${counter}</stringProp>
@@ -3069,7 +3076,7 @@
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
             <stringProp name="HTTPSampler.path">${context}/secure/admin/user/EditUserGroups.jspa</stringProp>
-            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
