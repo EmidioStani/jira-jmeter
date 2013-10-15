@@ -22,3 +22,12 @@ Further I improved the script giving the possibility:
 Therefore after you download the script (with the resources) just remember to adapt the Crowd configuration (parameter -Jcrowd.host) and that the operation Create User from Crowd expect to have Crowd under the same ip address of Confluence (you can of course change it).
 
 The script has been executed on Jira 5.1.6 with Jmeter 2.7 and on Jira 5.2.8/11 with Jmeter 2.9
+
+Setup:
+jmeter.bat -t ..\..\jira-jmeter-master\jmeter-test-setup.jmx -Jadmin.user=ADMINUSER -Jadmin.pass=ADMINPASSWORD -Jjira.host=SERVERNAME -Jjira.port=443 -Jjira.context=/JIRACONTEXT -Jenable.sso=true -Jjira.protocol=https
+
+Execution:
+jmeter.bat -t ..\..\jira-jmeter-master\jmeter-test-fixedload.jmx  -Jadmin.user=ADMINUSER -Jadmin.pass=ADMINPASSWORD -Jjira.host=SERVERNAME -Jjira.port=443 -Jjira.context=/JIRACONTEXT -Jjira.protocol=https
+
+Deletion:
+jmeter.bat -t ..\..\jira-jmeter-master\jmeter-test-setup.jmx -Jadmin.user=ADMINUSER -Jadmin.pass=ADMINPASSWORD -Jjira.host=SERVERNAME -Jjira.port=443 -Jjira.context=/JIRACONTEXT -Jremove.data=true -Jjira.protocol=https
