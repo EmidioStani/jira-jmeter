@@ -2532,7 +2532,7 @@
                         </elementProp>
                         <elementProp name="Referer" elementType="Header">
                           <stringProp name="Header.name">Referer</stringProp>
-                          <stringProp name="Header.value">http://crowd.esa-ossr.eu/crowd/console/secure/user/add!update.action</stringProp>
+                          <stringProp name="Header.value">http://localhost/crowd/console/secure/user/add!update.action</stringProp>
                         </elementProp>
                         <elementProp name="Accept-Encoding" elementType="Header">
                           <stringProp name="Header.name">Accept-Encoding</stringProp>
