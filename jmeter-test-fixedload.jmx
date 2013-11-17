@@ -182,7 +182,7 @@
           </elementProp>
           <elementProp name="reAssertIssue" elementType="Argument">
             <stringProp name="Argument.name">reAssertIssue</stringProp>
-            <stringProp name="Argument.value">id=&quot;key-val&quot;|&lt;title&gt;\[\#[A-Z]+-[\d]+\]|Workflow Action Invalid|The issue type selected is invalid|You do not have permission|Your session timed out|WORKFLOW ASSOCIATION</stringProp>
+            <stringProp name="Argument.value">id=&quot;key-val&quot;|&lt;title&gt;\[\#[A-Z]+-[\d]+\]|Workflow Error|Workflow Action Invalid|The issue type selected is invalid|You do not have permission|Your session timed out|WORKFLOW ASSOCIATION</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="reExtractIssueKey" elementType="Argument">
@@ -227,7 +227,7 @@
           </elementProp>
           <elementProp name="reAssertBrowseProject" elementType="Argument">
             <stringProp name="Argument.name">reAssertBrowseProject</stringProp>
-            <stringProp name="Argument.value">Browse currently active project</stringProp>
+            <stringProp name="Argument.value">Unresolved: By Priority</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="reExtractSummary" elementType="Argument">
@@ -252,7 +252,7 @@
           </elementProp>
           <elementProp name="reAssertEditIssueStep1" elementType="Argument">
             <stringProp name="Argument.name">reAssertEditIssueStep1</stringProp>
-            <stringProp name="Argument.value">Use this form to edit the fields of this issue|You do not have permission</stringProp>
+            <stringProp name="Argument.value">Edit Issue|You do not have permission</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="reAssertDeleteStep1" elementType="Argument">
